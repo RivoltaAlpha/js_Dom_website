@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Todo app</title>
+    <header>
+      <div class="pagebanner">
+        <h1>Todo</h1>
+        <div class="input-container">
+          <input type="text" id="new-todo" placeholder="Add a new todo..." />
+          <button id="add-todo">Add Todo</button>
+        </div>
+      </div>
+    </header>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="display-todo">
+        <ul id="todo-list"></ul>
+        <div class="filters">
+          <button data-filter="all">All</button>
+          <button data-filter="active">Active</button>
+          <button data-filter="completed">Completed</button>
+          <button id="clear-completed">Clear Completed</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
