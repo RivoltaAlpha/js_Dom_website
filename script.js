@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       todoItem.className = todo.completed ? "completed" : "";
       todoItem.draggable = true;
       todoItem.innerHTML = `
-                <input type="radio" ${
+                <input type="radio" class="custom-checkbox" ${
                   todo.completed ? "checked" : ""
                 } onclick="toggleComplete(${index})">
                 <span>${todo.text}</span>

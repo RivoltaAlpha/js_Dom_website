@@ -13,12 +13,16 @@ body {
   width: 90%;
   height: 100%;
   color: aliceblue;
-  margin: 0 50px;
+  margin: 0 300px;
   border-radius: 5px;
   overflow: hidden;
   border: 1px solid rgba(211, 211, 211, 0.227);
   padding-bottom: 50px;
   padding-top: 2px;
+}
+h1 {
+  color: aliceblue;
+  padding-bottom: 10px;
 }
 h1,
 p {
@@ -29,7 +33,7 @@ p {
   background-image: url(./images/bg-desktop-dark.jpg);
   background-size: 100%;
   align-items: center;
-  padding: 30px 50px;
+  padding: 130px 100px;
 }
 .pagebanner h1,
 .pagebanner p {
@@ -108,12 +112,17 @@ li {
   .wrapper {
     flex-direction: row;
     align-items: flex-start;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    width: auto;
   }
 
-  main {
+  /* body {
     flex: 1;
-    margin-left: 2rem;
-  }
+    margin-left: 0;
+  } */
   .pagebanner {
     background-image: url(./images/bg-mobile-dark.jpg);
   }
