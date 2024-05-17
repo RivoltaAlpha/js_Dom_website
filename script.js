@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const newTodoInput = document.getElementById("new-todo");
   const addTodoButton = document.getElementById("add-todo");
@@ -26,9 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
       todoItem.className = todo.completed ? "completed" : "";
       todoItem.draggable = true;
       todoItem.innerHTML = `
+                <input type="radio" ${
+                  todo.completed ? "checked" : ""
+                } onclick="toggleComplete(${index})">
                 <span>${todo.text}</span>
                 <div>
-                    <button onclick="toggleComplete(${index})">✔</button>
                     <button onclick="deleteTodo(${index})">✖</button>
                 </div>
             `;
@@ -44,13 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const toggleComplete = (index) => {
+  window.toggleComplete = (index) => {
     todos[index].completed = !todos[index].completed;
     saveTodos();
     renderTodos();
   };
 
-  const deleteTodo = (index) => {
+  window.deleteTodo = (index) => {
     todos.splice(index, 1);
     saveTodos();
     renderTodos();
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderTodos();
   });
 
-  // Drag and drop
+  // Drag and drop functionality
   let draggedIndex;
   todoList.addEventListener("dragstart", (e) => {
     draggedIndex = [...todoList.children].indexOf(e.target);
@@ -93,6 +93,19 @@ document.addEventListener("DOMContentLoaded", () => {
       renderTodos();
     }
   });
+
+  const fetchTodos = async () => {
+    try {
+      const response = await fetch("data.json");
+      const data = await response.json();
+      todos = JSON.parse(localStorage.getItem("todos")) || data;
+      renderTodos();
+    } catch (error) {
+      console.error("Error fetching todos:", error);
+    }
+  };
+
+  fetchTodos();
 
   renderTodos();
 });

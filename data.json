@@ -1,0 +1,8 @@
+[
+  { "text": "Learn JavaScript", "completed": false },
+  { "text": "Read a book", "completed": true },
+  { "text": "Go for a walk", "completed": false },
+  { "text": "Write a blog post", "completed": false },
+  { "text": "Practice guitar", "completed": true },
+  { "text": "Cook dinner", "completed": false }
+]
