@@ -10,7 +10,7 @@ body {
   display: grid;
   align-items: center;
   background-color: rgba(69, 58, 58, 0.308);
-  width: 90%;
+  width: 65%;
   height: 100%;
   color: aliceblue;
   margin: 0 300px;
@@ -51,7 +51,8 @@ input[type="text"] {
   flex: 1;
   margin-left: 250px;
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: 1rem;
+  padding-left: 150px;
   margin-right: 0.5rem;
   color: rgb(216, 233, 242);
   background-color: rgba(0, 0, 0, 0.508);
@@ -108,22 +109,31 @@ li {
   align-self: flex-end;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 769px) {
   .wrapper {
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
     border-radius: 5px;
-    overflow: hidden;
-    padding-bottom: 5px;
-    padding-top: 2px;
-    width: auto;
-  }
-
-  /* body {
+    width: 90%;
     flex: 1;
-    margin-left: 0;
-  } */
+    margin: 15px;
+  }
   .pagebanner {
     background-image: url(./images/bg-mobile-dark.jpg);
+    background-position: 90%;
+    background-repeat: no-repeat;
+    align-items: center;
+    padding: 1px;
+  }
+  input[type="text"] {
+    flex: 1;
+    margin-left: 90px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 0.5rem;
+    padding-left: 10px;
+  }
+  #add-todo {
+    margin-left: 150px;
+    margin-bottom: 15px;
   }
 }
