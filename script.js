@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   addTodoButton.addEventListener("click", () => addTodo(newTodoInput.value));
   newTodoInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") addTodoButton.click();
+    newTodoInput.value="";
   });
 
   filterButtons.forEach((button) => {
