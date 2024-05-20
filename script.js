@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
       todos.push({ text, completed: false });
       saveTodos();
       renderTodos();
-      newTodoInput.textContent = "";
     }
+    text.value = "";
   };
 
   window.toggleComplete = (index) => {
