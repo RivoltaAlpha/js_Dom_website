@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       todos.push({ text, completed: false });
       saveTodos();
       renderTodos();
-      newTodoInput.value = "";
+      newTodoInput.textContent = "";
     }
   };
 
@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   addTodoButton.addEventListener("click", () => addTodo(newTodoInput.value));
   newTodoInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") addTodoButton.click();
+       newTodoInput.textContent ="";
 
   });
 
